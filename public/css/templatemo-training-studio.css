@@ -857,10 +857,6 @@ Boutique
 --------------------------------------------
 */
 
-#boutique {
-  margin-bottom: 140px;
-}
-
 #boutique .itemshop-list {
   overflow-y: scroll;
   max-height: 525px;

@@ -43,13 +43,13 @@
                                 <!-- ***** Logo End ***** -->
                                 <!-- ***** Menu Start ***** -->
                                 <ul class="nav nav-animate">
-                                    <li class="scroll-to-section"><a href="#top" class="active">Jouer</a></li>
-                                    <li class="scroll-to-section"><a href="#presentation">Presentation</a></li>
-                                    <li class="scroll-to-section"><a href="#boutique">Boutique</a></li>
-                                    <li class="scroll-to-section"><a href="#wiki">Wiki</a></li>
-                                    <li class="scroll-to-section"><a href="https://discord.gg/TfWGYXx" target="_blank">Discord</a></li>
-                                    <li class="scroll-to-section"><a href="#" target="_blank">Connexion</a></li>
-                                    <li class="main-button"><a href="#" data-toggle="modal" data-target="#inscriptionModal">Inscription</a></li>
+                                    <li class="scroll-to-section"><a href="#top" class="active menu-scroll">Jouer</a></li>
+                                    <li class="scroll-to-section"><a href="#presentation" class="menu-scroll">Presentation</a></li>
+                                    <li class="scroll-to-section"><a href="#boutique" class="menu-scroll">Boutique</a></li>
+                                    <li class="scroll-to-section"><a href="#wiki" class="menu-scroll">Wiki</a></li>
+                                    <li class=""><a href="https://discord.gg/TfWGYXx" target="_blank">Discord</a></li>
+                                    <li class=""><a href="#miaou">Connexion</a></li>
+                                    <li class="main-button"><a data-toggle="modal" data-target="#inscriptionModal">Inscription</a></li>
                                 </ul>
                                 <a class='menu-trigger'>
                                 <span>Menu</span>
