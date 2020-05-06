@@ -177,6 +177,7 @@ html, body {
 }
 
 .main-button a {
+  cursor: pointer;
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
@@ -1190,4 +1191,8 @@ responsive
 
 .btn-primary{
   color: white;
+}
+
+.cursorpointer{
+  cursor: pointer;
 }

@@ -21,9 +21,13 @@
         "sass": "^1.20.1",
         "sass-loader": "^8.0.2",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue-axios": "^2.1.5",
+        "vue-loader": "^15.9.2",
+        "vue-router": "^3.1.6",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "@websanova/vue-auth": "^3.1.2-beta",
         "node-sass": "^4.14.0"
     }
 }
