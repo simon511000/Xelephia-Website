@@ -47,7 +47,10 @@ class InscriptionModal extends Component
             'password' => ['required', 'string', 'min:8'],
         ], $this->validateMessages);
 
-        if($this->password !== $this->passwordConfirm) $this->addError('password', 'Les mots de passes ne correspondent pas');
+        if($this->password !== $this->passwordConfirm){
+            $this->addError('password', 'Les mots de passes ne correspondent pas');
+        }
+
 
         $user->name = $this->name;
         $user->email = $this->email;
