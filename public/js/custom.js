@@ -105,15 +105,48 @@
 	            window.location.hash = target;
 	            $(document).on("scroll", onScroll);
 	        });
-	    });
+		});
+		
+		window.livewire.on('userInscrit', () => {
+			$('#inscriptionModal').modal('hide');
+			$('body').removeClass('modal-open');
+			$('.modal-backdrop').remove();
+			iziToast.success({
+				title: 'Inscrit!',
+				message: 'Bienvenue sur Xelephia!',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+		})
+
+		window.livewire.on('userLogged', () => {
+			$('#connexionModal').modal('hide');
+			$('body').removeClass('modal-open');
+			$('.modal-backdrop').remove();
+			iziToast.success({
+				title: 'Connecté!',
+				message: 'Ravis de vous revoir!',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+		})
+
+		window.livewire.on('loginFalse', () => {
+			iziToast.error({
+				title: 'Erreur!',
+				message: 'Adresse email ou mot de passe incorrect!',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+		})
+
 	});
 
 	function onScroll(event){
 	    var scrollPos = $(document).scrollTop();
-	    $('.menu-scroll').each(function () {
+	    $('.nav a').each(function () {
 	        var currLink = $(this);
-			var refElement = $(currLink.attr("href"));
-			if(refElement == "")return
+	        var refElement = $(currLink.attr("href"));
 	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 	            $('.nav ul li a').removeClass("active");
 	            currLink.addClass("active");
