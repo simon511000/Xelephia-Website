@@ -56,6 +56,8 @@ class InscriptionModal extends Component
 
         $this->reset();
 
+        auth()->login($user);
+
         $this->emit('userInscrit');
 
     }
