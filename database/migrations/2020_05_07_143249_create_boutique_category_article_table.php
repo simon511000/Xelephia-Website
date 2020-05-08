@@ -13,10 +13,10 @@ class CreateBoutiqueCategoryArticleTable extends Migration
      */
     public function up()
     {
-        Schema::create('boutique_category_article', function (Blueprint $table) {
+        Schema::create('boutique_article_boutique_category', function (Blueprint $table) {
             $table->id();
-            $table->integer('boutique_category_id')->unsigned();
             $table->integer('boutique_article_id')->unsigned();
+            $table->integer('boutique_category_id')->unsigned();
         });
     }
 

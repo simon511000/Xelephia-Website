@@ -31,7 +31,7 @@
 	"use strict";
 
 	$(function() {
-        $("#tabs").tabs();
+        $(".tabs").tabs();
     });
 
 	$(window).scroll(function() {
@@ -138,6 +138,10 @@
 				position: 'topCenter',
 				titleColor: '#f6861a'
 			})
+		})
+
+		window.livewire.on('categoryChanged', (tabId) => {
+			$('#' + tabId).tabs()
 		})
 
 	});

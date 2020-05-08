@@ -164,53 +164,7 @@
             <!-- ***** Notre Boutique Start ***** -->
             <section class="section" id="boutique">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3">
-                            <div class="section-heading">
-                                <h2>Notre <em>Boutique</em></h2>
-                                <img src="./images/line-dec.png" alt="">
-                                <p>C'est ici que vous pouvez échanger vos <em style="color:#f6861a" >Points Boutique</em> en échange de lots sur le serveur (Grades, Cosmétiques...)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="tabs">
-                        <div class="col-lg-4">
-                            <div class="main-rounded-button"><a href="#">Mon panier</a></div>
-                            <ul class="itemshop-list">
-                                <li><a href='#tabs-1'>Article N°1<img src="./images/features/server-icon.png" alt=""></a></li>
-                                <li><a href='#tabs-2'>Article N°2<img src="./images/features/server-icon.png" alt=""></a></li>
-                                <li><a href='#tabs-3'>Article N°3<img src="./images/features/server-icon.png" alt=""></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-8">
-                            <section class='tabs-content'>
-                                <article id='tabs-1'>
-                                    <img src="https://via.placeholder.com/730x250" alt="Image">
-                                    <h4>Article N°1</h4>
-                                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-                                    <div class="main-button">
-                                        <a href="#">Ajouter au panier</a>
-                                    </div>
-                                </article>
-                                <article id='tabs-2'>
-                                    <img src="https://via.placeholder.com/730x250" alt="Second Training">
-                                    <h4>Article N°2</h4>
-                                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                                    <div class="main-button">
-                                        <a href="#">Ajouter au panier</a>
-                                    </div>
-                                </article>
-                                <article id='tabs-3'>
-                                    <img src="https://via.placeholder.com/730x250" alt="Second Training">
-                                    <h4>Article N°3</h4>
-                                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                                    <div class="main-button">
-                                        <a href="#">Ajouter au panier</a>
-                                    </div>
-                                </article>
-                            </section>
-                        </div>
-                    </div>
+                    <livewire:boutique-main />
                 </div>
             </section>
             <!-- ***** Notre Boutique End ***** -->

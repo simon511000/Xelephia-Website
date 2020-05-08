@@ -868,22 +868,22 @@ Boutique
   direction: rtl;
 }
 
-#tabs ul {
+.tabs ul {
   margin: 0;
   padding: 0;
 }
 
-#tabs ul li {
+.tabs ul li {
   margin-bottom: 30px;
   display: inline-block;
   width: 100%;
 }
 
-#tabs ul li:last-child {
+.tabs ul li:last-child {
   margin-bottom: 10px;
 }
 
-#tabs ul li a {
+.tabs ul li a {
   text-transform: capitalize;
   width: 100%;
   padding: 30px 30px;
@@ -898,7 +898,7 @@ Boutique
   transition: all 0.3s;
 }
 
-#tabs .main-rounded-button a {
+.tabs .main-rounded-button a {
   text-align: center;
   padding: 20px 30px;
   margin-bottom: 20px;
@@ -913,27 +913,27 @@ Boutique
   background-color: #f6861a;
 }
 
-#tabs .main-rounded-button a:hover {
+.tabs .main-rounded-button a:hover {
   background-color: #f9735b;
 }
 
-#tabs ul li a img {
+.tabs ul li a img {
   max-width: 100%;
   margin-right: 20px;
 }
 
-#tabs ul .ui-tabs-active span {
+.tabs ul .ui-tabs-active span {
   background: #faf5b2;
   border: #faf5b2;
   line-height: 90px;
   border-bottom: none;
 }
 
-#tabs ul .ui-tabs-active a {
+.tabs ul .ui-tabs-active a {
   color: #f6861a;
 }
 
-#tabs ul .ui-tabs-active span {
+.tabs ul .ui-tabs-active span {
   color: #1e1e1e;
 }
 
