@@ -21,7 +21,7 @@
             <div class="main-rounded-button"><a href="#">Mon panier</a></div>
             <ul class="itemshop-list">
                 @foreach($articles as $article)
-                    <li><a href='#tabs-{{ $article->id }}'>{{ $article->title }}<img src="./images/features/server-icon.png" alt=""></a></li>
+                    <li><a href='#tabs-{{ $article->id }}'>{{ $article->title }}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -33,7 +33,7 @@
                         <h4>{{ $article->title }}</h4>
                         <p>{{ $article->description }}</p>
                         <div class="main-button">
-                            <a href="#">Ajouter au panier</a>
+                            <a href="#">Ajouter au panier ({{ $article->getPrice() }})</a>
                         </div>
                     </article>
                 @endforeach

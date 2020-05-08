@@ -11,4 +11,11 @@ class BoutiqueArticle extends Model
     public function categories(){
         return $this->belongsToMany(BoutiqueCategory::class);
     }
+
+    public function getPrice()
+    {
+        $price = $this->price / 100;
+
+        return number_format($price, 2, ',', ' ') . ' €';
+    }
 }
