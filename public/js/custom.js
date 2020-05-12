@@ -31,7 +31,7 @@
 	"use strict";
 
 	$(function() {
-        $(".tabs").tabs();
+        // $(".tabs").tabs();
     });
 
 	$(window).scroll(function() {
@@ -84,7 +84,13 @@
 
 
 	$(document).ready(function () {
-	    $(document).on("scroll", onScroll);
+		$(document).on("scroll", onScroll);
+		
+		function closeModal(id){
+			$('#' + id).modal('hide');
+			$('body').removeClass('modal-open');
+			$('.modal-backdrop').remove();
+		}
 	    
 	    //smoothscroll
 	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
@@ -108,9 +114,7 @@
 		});
 		
 		window.livewire.on('userInscrit', () => {
-			$('#inscriptionModal').modal('hide');
-			$('body').removeClass('modal-open');
-			$('.modal-backdrop').remove();
+			closeModal('inscriptionModal')
 			iziToast.success({
 				title: 'Inscrit!',
 				message: 'Bienvenue sur Xelephia!',
@@ -120,9 +124,7 @@
 		})
 
 		window.livewire.on('userLogged', () => {
-			$('#connexionModal').modal('hide');
-			$('body').removeClass('modal-open');
-			$('.modal-backdrop').remove();
+			closeModal('connexionModal')
 			iziToast.success({
 				title: 'Connecté!',
 				message: 'Ravis de vous revoir!',
@@ -139,9 +141,19 @@
 				titleColor: '#f6861a'
 			})
 		})
+		
+		window.livewire.on('productAddedToCart', () => {
+			iziToast.success({
+				title: 'Ajouté!',
+				message: 'Le produit a bien été ajouté au panier!',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+		})
 
-		window.livewire.on('categoryChanged', (tabId) => {
-			$('#' + tabId).tabs()
+		window.livewire.on('passwordForget', (tabId) => {
+			closeModal('connexionModal')
+			$('#passwordMainModal').modal('show')
 		})
 
 	});

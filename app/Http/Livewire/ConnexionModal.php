@@ -36,6 +36,10 @@ class ConnexionModal extends Component
 
     }
 
+    public function motDePasseOublie(){
+        $this->emit('passwordForget');
+    }
+
     public function render()
     {
         return view('livewire.connexion-modal');

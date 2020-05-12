@@ -167,6 +167,7 @@
                     <livewire:boutique-main />
                 </div>
             </section>
+            
             <!-- ***** Notre Boutique End ***** -->
             <!-- ***** Notre Wiki Starts ***** -->
             <section class="section" id="wiki">
@@ -281,6 +282,11 @@
             <div class="modal fade" id="connexionModal" tabindex="-1" role="dialog" aria-labelledby="connexionModalLabel" aria-hidden="true">
                 <livewire:connexion-modal />
             </div>
+
+            <!-- Modal mot de passe oublié -->
+            <div class="modal fade" id="passwordMainModal" tabindex="-1" role="dialog" aria-labelledby="passwordMainModalLabel" aria-hidden="true">
+                <livewire:mot-de-passe-oublie-main />
+            </div>
         </div>
         <!-- <script src="./js/wow.min.js"></script>
             <script>
@@ -300,6 +306,7 @@
         <script src="./js/mixitup.js"></script> 
         <script src="./js/accordions.js"></script>
         <script src="./js/iziToast.min.js"></script>
+        <script src="./js/app.js"></script>
         <!-- Global Init -->
         <script src="./js/custom.js"></script>
         <livewire:scripts>
