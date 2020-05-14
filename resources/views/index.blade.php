@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
         <link rel="stylesheet" href="./css/iziToast.min.css">
         <link rel="stylesheet" href="./css/templatemo-training-studio.css">
-        <livewire:styles>
+        <livewire:styles />
     </head>
     <body>
         <!-- ***** Preloader Start ***** -->
@@ -287,11 +287,19 @@
             <div class="modal fade" id="passwordMainModal" tabindex="-1" role="dialog" aria-labelledby="passwordMainModalLabel" aria-hidden="true">
                 <livewire:mot-de-passe-oublie-main />
             </div>
+
+            <!-- Modal réinitialisation du mot de passe -->
+            @if($showResetPasswordLinkModel)
+                <div class="modal fade" id="resetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+                    <livewire:reset-password-modal :token="$token" :email="$email"/>
+                </div>
+            @endif
         </div>
         <!-- <script src="./js/wow.min.js"></script>
             <script>
                 new WOW().init();
             </script> -->
+        <livewire:scripts />
         <script src="./js/clipboard.min.js"></script>
         <!-- jQuery -->
         <script src="./js/jquery-2.1.0.min.js"></script>
@@ -309,7 +317,11 @@
         <script src="./js/app.js"></script>
         <!-- Global Init -->
         <script src="./js/custom.js"></script>
-        <livewire:scripts>
+        @if($showResetPasswordLinkModel)
+            <script>
+                $('#resetPasswordModal').modal('show')
+            </script>
+        @endif
     </body>
 </html>
 

@@ -123,14 +123,16 @@
 			})
 		})
 
-		window.livewire.on('userLogged', () => {
-			closeModal('connexionModal')
-			iziToast.success({
-				title: 'Connecté!',
-				message: 'Ravis de vous revoir!',
-				position: 'topCenter',
-				titleColor: '#f6861a'
-			})
+		window.livewire.on('userLogged', (nothing = false) => {
+			if(!nothing){
+				closeModal('connexionModal')
+				iziToast.success({
+					title: 'Connecté!',
+					message: 'Ravis de vous revoir!',
+					position: 'topCenter',
+					titleColor: '#f6861a'
+				})
+			}
 		})
 
 		window.livewire.on('loginFalse', () => {
@@ -154,6 +156,25 @@
 		window.livewire.on('passwordForget', (tabId) => {
 			closeModal('connexionModal')
 			$('#passwordMainModal').modal('show')
+		})
+
+		window.livewire.on('emailSendPassowrd', (email) => {
+			iziToast.success({
+				title: 'Envoyé!',
+				message: 'L\'email a bien été envoyé à l\'adresse "' + email + '" !',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+		})
+
+		window.livewire.on('passwordReseted', () => {
+			iziToast.success({
+				title: 'Réinitialisé!',
+				message: 'Le mot de passe a bien été réinitialisé!',
+				position: 'topCenter',
+				titleColor: '#f6861a'
+			})
+			closeModal('resetPasswordModal')
 		})
 
 	});

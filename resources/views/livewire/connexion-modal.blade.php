@@ -30,10 +30,10 @@
                         name="password"
                         required
                     >
+                    @error('password') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     <small id="passwordHelpBlock" class="form-text text-muted">
                         <a href="#" onclick="return false;" wire:click="motDePasseOublie">Mot de passe oublié ?</a>
                     </small>
-                    @error('password') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </div>
             <div class="modal-footer">

@@ -13,7 +13,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +22,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('index', [
+            'showResetPasswordLinkModel' => session()->get('showResetPasswordLinkModel', false),
+            'token' => session()->get('token', null),
+            'email' => session()->get('email', null)
+        ]);
+    }
+
+    public function passwordResetLink($token){
+        session([
+            'showResetPasswordLinkModel' => true,
+            'token' => $token,
+            'email' => $_GET['email']
+        ]);
+        return redirect()->route('index');
     }
 }
