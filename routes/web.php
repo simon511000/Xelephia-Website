@@ -1,7 +1,5 @@
 <?php
 
-use TCG\Voyager\Facades\Voyager;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('index');
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+Route::get('/', function () {
+    return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('password/reset/{token}', 'HomeController@passwordResetLink')->name('password.reset');
