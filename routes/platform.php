@@ -10,6 +10,8 @@ use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
 use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
+use App\Orchid\Screens\Boutique\BoutiqueArticle\BoutiqueArticleEditScreen;
+use App\Orchid\Screens\Boutique\BoutiqueArticle\BoutiqueArticleListScreen;
 use App\Orchid\Screens\Boutique\BoutiqueCategory\BoutiqueCategoryEditScreen;
 use App\Orchid\Screens\Boutique\BoutiqueCategory\BoutiqueCategoryListScreen;
 
@@ -85,3 +87,14 @@ Route::screen('roles', RoleListScreen::class)
             ->parent('platform.index')
             ->push(__('Roles'), route('platform.systems.roles'));
     });
+
+// Boutique
+Route::screen('boutique/articles', BoutiqueArticleListScreen::class)
+    ->name('platform.boutique.article.list');
+Route::screen('boutique/article/{article?}', BoutiqueArticleEditScreen::class)
+    ->name('platform.boutique.article.edit');
+
+Route::screen('boutique/categories', BoutiqueCategoryListScreen::class)
+    ->name('platform.boutique.category.list');
+Route::screen('boutique/category/{category?}', BoutiqueCategoryEditScreen::class)
+    ->name('platform.boutique.category.edit');

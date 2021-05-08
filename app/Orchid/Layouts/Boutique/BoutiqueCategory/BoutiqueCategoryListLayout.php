@@ -28,9 +28,10 @@ class BoutiqueCategoryListLayout extends Table
     {
         return [
             TD::make('name', 'Nom')
+                ->sort()
                 ->render(function(BoutiqueCategory $category) {
                     return Link::make($category->name)
-                        ->route('platform.boutique.categories.edit', $category->id);
+                        ->route('platform.boutique.category.edit', $category->id);
                 })
         ];
     }

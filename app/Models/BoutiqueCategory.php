@@ -2,20 +2,27 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Orchid\Screen\AsSource;
+use Orchid\Filters\Filterable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class BoutiqueCategory extends Model
 {
     use HasFactory;
-    use AsSource;
+    use AsSource, Filterable;
 
-    protected $guarded = [];
     public $timestamps = false;
 
+    protected $fillable = [
+        'name'
+    ];
+
+    protected $allowedSorts = [
+        'name'
+    ];
+
     public function articles(){
-        return $this->BelongsToMany(BoutiqueArticle::class, 'boutique_category_articles');
+        return $this->hasMany(BoutiqueArticle::class);
     }
 }

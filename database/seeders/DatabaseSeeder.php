@@ -20,8 +20,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\BoutiqueCategory::factory(10)->create()->each(function($category){
-            $articles = \App\Models\BoutiqueArticle::factory(15)->make();
-            $category->articles()->saveMany($articles);
+            $articles = \App\Models\BoutiqueArticle::factory(15)->create(['boutique_category_id' => $category->id]);
         });
     }
 }

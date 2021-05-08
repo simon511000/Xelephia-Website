@@ -20,6 +20,7 @@ class BoutiqueCategoryEditLayout extends Rows
         return [
             Input::make('category.name')
                 ->title('Nom')
+                ->placeholder('Nom de la catégorie')
                 ->required()
         ];
     }

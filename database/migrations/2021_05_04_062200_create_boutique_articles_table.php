@@ -16,10 +16,11 @@ class CreateBoutiqueArticlesTable extends Migration
         Schema::create('boutique_articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
+            $table->foreignId('boutique_category_id');
+            $table->foreign('boutique_category_id')->references('id')->on('boutique_categories')->onDelete('cascade');
+            $table->text('description')->nullable();
             $table->integer('price');
-            $table->string('image');
-            $table->timestamps();
+            $table->string('image')->nullable();
         });
     }
 

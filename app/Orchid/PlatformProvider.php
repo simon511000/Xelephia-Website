@@ -17,7 +17,10 @@ class PlatformProvider extends OrchidServiceProvider
     {
         parent::boot($dashboard);
 
-        // ...
+        $permissions = ItemPermission::group('Main')
+            ->addPermission('platform.boutique', 'Pouvoir modifier la boutique');
+        
+        $dashboard->registerPermissions($permissions);
     }
 
     /**
@@ -36,6 +39,19 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('lock')
                 ->route('platform.systems.roles')
                 ->permission('platform.systems.roles'),
+            Menu::make('Boutique')
+                ->icon('basket')
+                ->permission('platform.boutique')
+                ->list([
+                    Menu::make('Articles')
+                        ->icon('basket-loaded')
+                        ->route('platform.boutique.article.list')
+                        ->permission('platform.boutique'),
+                    Menu::make('Catégories')
+                        ->icon('list')
+                        ->route('platform.boutique.category.list')
+                        ->permission('platform.boutique')
+                ])
         ];
     }
 

@@ -34,6 +34,7 @@ class UserFactory extends Factory
                 'platform.systems.comment'            => 1,
                 'platform.systems.attachment'         => 1,
                 'platform.systems.media'              => 1,
+                'platform.boutique'                   => 1,
             ],
             'user'   => [
                 'platform.index'                       => 1,
