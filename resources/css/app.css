@@ -18,4 +18,12 @@
     .nav-link-active {
         @apply text-primary;
     }
+
+    .navbar-initial {
+        @apply absolute bg-white bg-opacity-10 text-white;
+    }
+
+    .navbar-scrolled {
+        @apply fixed bg-white text-black transition duration-500;
+    }
 }

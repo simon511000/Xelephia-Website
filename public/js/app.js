@@ -3802,6 +3802,22 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
+var navbar = document.querySelector('#navbar');
+var header = document.querySelector('#header');
+var navbarOptions = {
+  rootMargin: '-90px 0px 0px 0px'
+};
+var navbarObserver = new IntersectionObserver(function (entries, navbarObserver) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      navbar.classList.replace('navbar-initial', 'navbar-scrolled');
+    } else {
+      navbar.classList.replace('navbar-scrolled', 'navbar-initial');
+    }
+  });
+}, navbarOptions);
+navbarObserver.observe(header);
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

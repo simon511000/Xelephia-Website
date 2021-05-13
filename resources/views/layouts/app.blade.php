@@ -16,5 +16,7 @@
     </head>
     <body class="font-sans">
         @include('partials.header')
+
+        @include('partials.presentation')
     </body>
 </html>

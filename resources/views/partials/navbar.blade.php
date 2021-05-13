@@ -1,18 +1,18 @@
-<nav class="bg-white bg-opacity-10">
+<nav id="navbar" class="w-full z-10 navbar-initial">
     <div class="max-w-6xl mx-auto">
         <div class="flex justify-between">
             <div class="">
                 <img src="{{ asset('images/logo/logo-full.png') }}" alt="Logo de Xelephia" class="h-20">
             </div>
     
-            <ul class="flex items-center text-white font-poppins text-sm font-medium tracking-wide">
+            <ul class="flex items-center font-poppins text-sm font-medium tracking-wide">
                 <li class="nav-link nav-link-active">
-                    <a class="py-3" href="#">
+                    <a class="py-3" href="#top">
                         Jouer
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="#section-presentation">
                         Présentation
                     </a>
                 </li>
@@ -43,7 +43,7 @@
                         </a>
                     </div>
                 </li>
-            </div>
+            </ul>
         </div>
     </div>
 </nav>
