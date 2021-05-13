@@ -17,7 +17,8 @@ module.exports = {
         '7.5xl': '5.25rem'
       },
       colors: {
-        primary: '#f6861a'
+        primary: '#f6861a',
+        primaryhover: '#f9735b'
       }
     },
   },
