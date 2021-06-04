@@ -14,7 +14,7 @@
 
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans">
+    <body class="font-poppins">
         @include('partials.header')
 
         @include('partials.presentation')
