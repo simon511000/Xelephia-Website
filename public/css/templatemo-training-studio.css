@@ -688,7 +688,7 @@ banner
 
 .main-banner {
   position: relative;
-  background-image: url(/images/image_header.png?8132625cc08fe99bed79957c77effb51);
+  background-image: url(/xelephia/public/images/image_header.png?8132625cc08fe99bed79957c77effb51);
   width: 100vw;
   height: 100vh;
   background-position: center center;
@@ -819,7 +819,7 @@ donation
 
 #donation {
   padding: 120px 0px;
-  background-image: url(/images/image_header.png?8132625cc08fe99bed79957c77effb51);
+  background-image: url(/xelephia/public/images/image_header.png?8132625cc08fe99bed79957c77effb51);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
